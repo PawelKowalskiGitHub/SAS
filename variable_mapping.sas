@@ -1,19 +1,18 @@
 
 *************************************************************************;
-*	Map the variables from the input2 table to the input1 table,        *;
-*	preserving the input1 column names.                                 *;
-* 	Parameters:                                                         *;
-*   	- input1 	- the name of the table whose data will be replaced,*;
-*					  and the column names will be preserved            *;
-*       - input2 	- name of the table whose data will be stored in the*; 
-*					  output table                                      *;
-*       - output	- name of the output table                          *;
-*       - key1		- related variable for input1                       *;
-*       - key2		- related variable for input2                       *;
+*	Map the variables from the input2 table to the input1 table,    *;
+*	preserving the input1 column names.                             *;
+* 	Parameters:                                                     *;
+*   	- input1 - the name of the table whose data will be replaced,   *;
+*		   and the column names will be preserved               *;
+*       - input2 - name of the table whose data will be stored in the   *; 
+*		   output table                                         *;
+*       - output - name of the output table                             *;
+*       - key1	 - related variable for input1                          *;
+*       - key2	 - related variable for input2                          *;
 *                                                                       *;
 *   Note: the macro works for tables stored in the WORK library!        *;
 *   Note: Note: both input tables must have the same number of columns. *;
-*                                                                       *;
 *************************************************************************;
 
 %macro variable_mapping(input1, input2, output, key1, key2);
@@ -43,8 +42,10 @@
 	quit;
 
 %mend variable_mapping;
-%variable_mapping(	input1=,
-					input2=,
-					output=,
-					key1=,
-					key2= )
+%variable_mapping(	
+		input1=,
+		input2=,
+		output=,
+		key1=,
+		key2= 
+			)
