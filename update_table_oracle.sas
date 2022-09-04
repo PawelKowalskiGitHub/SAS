@@ -19,28 +19,28 @@
 %macro update_table(master_table, transaction_table,var_list,key1,key2);
 
 	proc sql;
-		UPDATE &master_table. t1
+		update &master_table. t1
 		set 
 		%do j=1 %to %sysfunc(countw(%superq(var_list),%str( )));
 			%if &j ne %sysfunc(countw(%superq(var_list),%str( ))) %then %do;
-				%scan(%superQ(var_list),&j,%str( )) = (SELECT %scan(%superQ(var_list),&j,%str( ))
-		                 FROM &transaction_table. t2
-		                 WHERE t1.&key1. = t2.&key2.),
+				%scan(%superQ(var_list),&j,%str( )) = (select %scan(%superQ(var_list),&j,%str( ))
+									from &transaction_table. t2
+									where t1.&key1. = t2.&key2.),
 		    %end;
 		    %else %do;
-				%scan(%superQ(var_list),&j,%str( )) = (SELECT %scan(%superQ(var_list),&j,%str( ))
-		                 FROM &transaction_table. t2
-		                 WHERE t1.&key1. = t2.&key2.)
+				%scan(%superQ(var_list),&j,%str( )) = (select %scan(%superQ(var_list),&j,%str( ))
+									from &transaction_table. t2
+									where t1.&key1. = t2.&key2.)
 		    %end;		                 
 		%end;
 		where &key1. in (select &key2. 
-							from &transaction_table.)
+				from &transaction_table.)
 		;
 	quit;
 	
 %mend update_table;
 %update_table(	master_table=,
-				transaction_table=,
-		 		var_list=,
-				key1=,
-				key2=)
+		transaction_table=,
+		var_list=,
+		key1=,
+		key2=)
