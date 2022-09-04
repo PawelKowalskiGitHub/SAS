@@ -1,7 +1,7 @@
 
 *************************************************************************;
-*	Update a table with proc sql. It can be used for pass-through	*;
-*	to the Oracle database.						*;
+*   Update a table with proc sql. It can be used for pass-through	*;
+*   to the Oracle database.						*;
 * 	Parameters:                                                     *;
 *   	- master_table 		- main table that is updated.           *;
 *       - transaction_table 	- table that contains the changes to    *;
@@ -12,7 +12,7 @@
 *       - key2			- related variable for transaction_table*;
 *                                                                       *;
 *   NOTE: if a variable exists in the transaction table but does not	*;
-*		  exist in master, it will not be in output.		*;
+*	  exist in master, it will not be in output.			*;
 *                                                                       *;
 *************************************************************************;	
 
