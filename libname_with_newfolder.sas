@@ -1,12 +1,12 @@
 *************************************************************************;
-*	Create a SAS engine library with the creation of a new folder 		*;
-*	containing name of the library and creation datetime in the name.	*;
-* 	Parameters:                                                         *;
-*   	- libname 	- the name of the library to create		            *;
-*       - pathname 	- the physical name of the SAS library         	    *;
+*   Create a SAS engine library with the creation of a new folder 	*;
+*   containing name of the library and creation datetime in the name.	*;
+* 	Parameters:                                                     *;
+*   	- libname 	- the name of the library to create		*;
+*       - pathname 	- the physical name of the SAS library         	*;
 *                                                                       *;
 *   The name of the created folder will be in the following format: 	*;
-*	libname_DD-MM-YYYY_hhmmss											*;
+*  	libname_DD-MM-YYYY_hhmmss					*;						*;
 *                                                                       *;
 *************************************************************************;
 
@@ -14,7 +14,8 @@
 
 	*creating macrovariable with todays date;
 	%let datetime = %sysfunc(datetime(),datetime21.2);
-		
+
+	*creating a macrovariable with datetimes part of folder name;
 	data _null_;
 		length dt_name $100;
 		datetime = input("&datetime",datetime21.2);
@@ -32,5 +33,7 @@
 	options nodlcreatedir;
 	
 %mend libname_with_newfolder;
-%libname_with_newfolder(libname=RRR,
-						pathname=/home/u59174447/My_Projects/SAS_codes/RODO_ERR)
+
+%libname_with_newfolder(
+			libname= ,
+			pathname=)
