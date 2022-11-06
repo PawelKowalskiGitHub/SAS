@@ -1,16 +1,15 @@
 *************************************************************************;
-*	This is an example of a scheme for creating a series of macro  		*;
-*	variables with grouping.											*;
-* 	Parameters:                                                         *;
-*   	- tablename 		- table name, with data for macro variables *;
-*       - sort_variables 	- list of variables to sort         	    *;
-*																		*;
+*   This is an example of a scheme for creating a series of macro  	*;
+*   variables with grouping.						*;
+* 	Parameters:                                                     *;
+*   	- tablename 	 - table name, with data for macro variables 	*;
+*       - sort_variables - list of variables to sort         	   	*;
+*									*;
 *   The code presented here is just a template with an example to show 	*;
-*	how the program works.												*;
-*                                                                       *;
+*	how the program works.						*;
 *************************************************************************;
 
-
+*creating a sample dataset; 
 data dictionary_table;
    length LIBRARY $50 TABLE $50 VARIABLE $50;
    input LIBRARY $ TABLE $ VARIABLE $;
@@ -44,7 +43,7 @@ options mprint mlogic symbolgen;
 		by &sort_variables.;
 	run;
 
-	data variables;
+	data _null_;
 		retain LIBn 0;
 		retain TABn 0;
 		retain COLn 0; 
@@ -76,8 +75,8 @@ options mprint mlogic symbolgen;
 	
 %mend create_macrovariables;
 %create_macrovariables(
-						tablename=dictionary_table,
-						sort_variables=LIBRARY TABLE VARIABLE)
+			tablename=dictionary_table,
+			sort_variables=LIBRARY TABLE VARIABLE)
 	
 	
 	
