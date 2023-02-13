@@ -1,15 +1,15 @@
 *************************************************************************;
-*	The following code shows usage and differences basic procedures 	*;
-*	for Descriptive statistics in SAS:									*;
-*		- PROC FREQ														*;
-*		- PROC SUMMARY													*;
-*		- PROC MEANS													*;
-*		- PROC UNIVARIATE												*;
-*		- PROC TABULATE													*;
-*		- PROC REPORT													*;
-*																		*;
-*	The usage was shown on the example of the CARS data set from the 	*;
-*	sashelp library.													*;
+*	The following code shows usage and differences basic procedures *;
+*	for Descriptive statistics in SAS:				*;
+*		- PROC FREQ						*;
+*		- PROC SUMMARY						*;
+*		- PROC MEANS						*;
+*		- PROC UNIVARIATE					*;
+*		- PROC TABULATE						*;
+*		- PROC REPORT						*;
+*									*;
+*	The usage was shown on the example of the CARS data set from 	*;
+*	the sashelp library.						*;
 *************************************************************************;
 
 *-- For simplicity, we load a set of data from the SASHELP library to WORK and create macro variable with the name of our dataset;
@@ -24,11 +24,12 @@ run;
 
 
 *************************************************************************;
-*								PROC FREQ								*;
-*																		*;
-*	PROC FREQ is a procedure which helps to summarize categorical		*;
-*	variable. It's not just limited to counts, proc freq also produces	*; 
-*	plots and tests for association between two categorical variab.		*;
+*				PROC FREQ				*;
+*									*;
+*	PROC FREQ is a procedure which helps to summarize categorical	*;
+*	variable. It's not just limited to counts, proc freq also 	*; 
+*	produces plots and tests for association between two 		*;
+*	categorical variab.						*;
 *************************************************************************;
 
 *-- Let's create a frequency table to find out how many models each car brand contains --*;
