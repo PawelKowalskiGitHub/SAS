@@ -1,11 +1,11 @@
 *************************************************************************;
-*	This program shows a simple example of mapping variables using 		*;
-*	a HASH table.  														*;
+*	This program shows a simple example of mapping variables using 	*;
+*	a HASH table.  							*;
 *                                                                       *;
 *   In the example, the master table containing state abbreviations 	*;
-*	values in State variable is mapped. State abbreviations values 		*;
-*	will be replaced with the full state name from the data table to 	*;
-*	be mapped.                                                          *;
+*	values in State variable is mapped. State abbreviations values 	*;
+*	will be replaced with the full state name from the data table  	*;
+*	to be mapped.                                                   *;
 *                                                                       *;
 *************************************************************************;
 
