@@ -1,13 +1,12 @@
 *************************************************************************;
-*	This is an example of collecting multiple values of one column into *;
-*	one row by first/last grouping										*;
-*	In this example we want to collect the values from the SYS_ID 		*;
-*	column for all rows that have the same values in the columns 		*;
-*	colA-colD into 														*;
-*	one row.															*;
+*	This is an example of collecting multiple values of one column 	*;
+*	into one row by first/last grouping 				*;
+*	one row by first/last grouping					*;
+*	In this example we want to collect the values from the SYS_ID 	*;
+*	column for all rows that have the same values in the columns 	*;
+*	colA-colD into 							*;
+*	one row.							*;
 *************************************************************************;
-
-
 
 data TABLE;
 	infile datalines delimiter=',';
