@@ -1,8 +1,8 @@
 *************************************************************************;
-*    																 	*;
-*   Three ways to easily create macrolists (a list of values in a 		*;
-*	macro variable)														*;
-* 				                                        	            *;
+*    									*;
+*   Three ways to easily create macrolists (a list of values in a 	*;
+*	macro variable)							*;
+* 				                                 	*;
 *************************************************************************;
 
 *creating a sample dataset; 
