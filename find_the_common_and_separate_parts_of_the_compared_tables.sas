@@ -1,11 +1,11 @@
 *************************************************************************;
-*	Code that compares two tables. The result is a data set with an 	*;
-*	additional column informing which table the record comes from.		*;
-*	Two versions of the code - 4GL and SQL version. 					*;
-* 	Parameters:                                                         *;
-*	- table1 	- first table             							 	*;
-*	- table2 	- second table             								*;
-* 	- key    	- variable to join tables               				*;
+*	Code that compares two tables. The result is a data set with an *;
+*	additional column informing which table the record comes from.	*;
+*	Two versions of the code - 4GL and SQL version. 		*;
+* 	Parameters:                                                     *;
+*	- table1 	- first table             			*;
+*	- table2 	- second table             			*;
+* 	- key    	- variable to join tables               	*;
 *************************************************************************;
 
 *4GL way;
